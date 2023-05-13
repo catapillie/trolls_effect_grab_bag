@@ -1,0 +1,13 @@
+mods.trolls_effect_grab_bag.name=Troll's Effect Grab Bag
+
+triggers.trolls_effect_grab_bag/emote.placements.name.default=Emote Effect
+triggers.trolls_effect_grab_bag/emote.placements.name.granny_laugh=Emote Effect (Granny Laugh)
+triggers.trolls_effect_grab_bag/emote.attributes.description.event=the audio event that plays when this effect is triggered.
+triggers.trolls_effect_grab_bag/emote.attributes.description.path=the path to the image for this emote.
+triggers.trolls_effect_grab_bag/emote.attributes.description.once=whether this effect should only be played once.
+triggers.trolls_effect_grab_bag/emote.attributes.description.scale_x=the horizontal scaling factor of the emote.
+triggers.trolls_effect_grab_bag/emote.attributes.description.scale_y=the vertical scaling factor of the emote.
+triggers.trolls_effect_grab_bag/emote.attributes.description.rotation=the angle in degrees of rotation of the emote.
+triggers.trolls_effect_grab_bag/emote.attributes.description.mode=determines where the effect is played.\n* at player: the effect plays from the player's position.\n* at node: the effect plays from each node position (requires nodes).\n* on screen: the effect plays on the screen, regardless of the camera's position.
+triggers.trolls_effect_grab_bag/emote.attributes.description.offset_x=the horizontal offset position of the effect.
+triggers.trolls_effect_grab_bag/emote.attributes.description.offset_y=the vertical offset position of the effect.

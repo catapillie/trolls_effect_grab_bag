@@ -1,0 +1,8 @@
+- Name: trolls_effect_grab_bag
+  Version: 0.0.1
+  DLL: Code/bin/Debug/net452/TrollGrabBag.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.3471.0
+    - Name: Troll's Audio Grab Bag
+      Version: 0.0.1
