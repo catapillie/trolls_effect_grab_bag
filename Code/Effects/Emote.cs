@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace Celeste.Mod.TrollGrabBag.Effects;
 
-[CustomEntity("troll_grab_bag/emote")]
+[CustomEntity("trolls_effect_grab_bag/emote")]
 public sealed class Emote : Trigger
 {
     private readonly Vector2[] nodes;
