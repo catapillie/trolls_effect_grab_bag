@@ -44,7 +44,36 @@ emote.placements = {
             offset_x = 0.0,
             offset_y = 0.0,
         }
+    },
+    {
+        name = "poop",
+        data = {
+            event = "event:/SFX/Trollpack/FartNoise",
+            path = "troll_effects/poop",
+            once = false,
+            scale_x = 1.0,
+            scale_y = 1.0,
+            rotation = 0.0,
+            mode = "AtPlayer",
+            offset_x = 0.0,
+            offset_y = 0.0,
+        }
+    },
+    {
+        name = "buzzer",
+        data = {
+            event = "event:/SFX/Trollpack/Loud_Buzzer",
+            path = "troll_effects/x",
+            once = false,
+            scale_x = 1.0,
+            scale_y = 1.0,
+            rotation = 0.0,
+            mode = "AtPlayer",
+            offset_x = 0.0,
+            offset_y = 0.0,
+        }
     }
 }
+
 
 return emote

@@ -2,6 +2,8 @@ mods.trolls_effect_grab_bag.name=Troll's Effect Grab Bag
 
 triggers.trolls_effect_grab_bag/emote.placements.name.default=Emote Effect
 triggers.trolls_effect_grab_bag/emote.placements.name.granny_laugh=Emote Effect (Granny Laugh)
+triggers.trolls_effect_grab_bag/emote.placements.name.poop=Emote Effect (Poop)
+triggers.trolls_effect_grab_bag/emote.placements.name.buzzer=Emote Effect (Buzzer)
 triggers.trolls_effect_grab_bag/emote.attributes.description.event=the audio event that plays when this effect is triggered.
 triggers.trolls_effect_grab_bag/emote.attributes.description.path=the path to the image for this emote.
 triggers.trolls_effect_grab_bag/emote.attributes.description.once=whether this effect should only be played once.
