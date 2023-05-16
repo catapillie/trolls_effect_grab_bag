@@ -13,3 +13,5 @@ triggers.trolls_effect_grab_bag/emote.attributes.description.rotation=the angle 
 triggers.trolls_effect_grab_bag/emote.attributes.description.mode=determines where the effect is played.\n* at player: the effect plays from the player's position.\n* at node: the effect plays from each node position (requires nodes).\n* on screen: the effect plays on the screen, regardless of the camera's position.
 triggers.trolls_effect_grab_bag/emote.attributes.description.offset_x=the horizontal offset position of the effect.
 triggers.trolls_effect_grab_bag/emote.attributes.description.offset_y=the vertical offset position of the effect.
+
+triggers.trolls_effect_grab_bag/roses.placements.name.roses=Roses Effect
