@@ -15,3 +15,4 @@ triggers.trolls_effect_grab_bag/emote.attributes.description.offset_x=the horizo
 triggers.trolls_effect_grab_bag/emote.attributes.description.offset_y=the vertical offset position of the effect.
 
 triggers.trolls_effect_grab_bag/roses.placements.name.roses=Roses Effect
+triggers.trolls_effect_grab_bag/roses.attributes.description.once=whether this effect should only be played once.
