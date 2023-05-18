@@ -1,5 +1,5 @@
 - Name: trolls_effect_grab_bag
-  Version: 0.0.3
+  Version: 0.0.4
   DLL: Code/bin/Debug/net452/TrollGrabBag.dll
   Dependencies:
     - Name: Everest
