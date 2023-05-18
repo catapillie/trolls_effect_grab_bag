@@ -1,5 +1,6 @@
 ﻿using Celeste.Mod.Entities;
 using Celeste.Mod.TrollGrabBag.Core;
+using Celeste.Mod.TrollGrabBag.Utils;
 using System.Collections;
 
 namespace Celeste.Mod.TrollGrabBag.Effects;
@@ -116,28 +117,16 @@ file sealed class EmoteHUD : Entity
         texture.DrawCentered(position, Color.White, scale * 1 / texture.Width * 80 * size, rotation);
     }
 
-    public static IEnumerator Interpolate(float duration, Action<float> action)
-    {
-        float t = duration;
-        while (t > 0.0f)
-        {
-            action(1 - t / duration);
-            t = Calc.Approach(t, 0.0f, Engine.DeltaTime);
-            yield return null;
-        }
-        action(1.0f);
-    }
-
     private IEnumerator Animation(Vector2 at)
     {
-        yield return Interpolate(0.35f, percent =>
+        yield return Routines.Interpolate(0.35f, percent =>
         {
             float ease = Ease.BigBackOut(percent);
             Position = at - Vector2.UnitY * 8 * 2.5f * ease;
 
         });
         yield return 0.25f;
-        yield return Interpolate(0.2f, percent =>
+        yield return Routines.Interpolate(0.2f, percent =>
         {
             scale = Vector2.One * Ease.SineOut(1 - percent);
         });

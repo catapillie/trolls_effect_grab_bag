@@ -1,4 +1,7 @@
 ﻿using Celeste.Mod.Entities;
+using Celeste.Mod.TrollGrabBag.Utils;
+using System.Collections;
+using System.Linq;
 
 namespace Celeste.Mod.TrollGrabBag.Effects;
 
@@ -13,7 +16,7 @@ public sealed class Roses : Trigger
     {
         base.OnEnter(player);
 
-        Scene.Add(new RosesHUD());
+        Scene.Add(new RosesHUD(Scene as Level));
         Audio.Play("event:/SFX/Trollpack/Roses");
 
         RemoveSelf();
@@ -25,15 +28,12 @@ file sealed class RosesHUD : Entity
     private readonly MTexture rose;
     private float opacity;
 
-    public RosesHUD()
+    public RosesHUD(Level level)
     {
         Tag = Tags.HUD;
         rose = GFX.Gui["troll_effects/rose"];
-    }
 
-    public override void Update()
-    {
-        opacity = Calc.Approach(opacity, 1f, Engine.DeltaTime / 0.5f);
+        Add(new Coroutine(Sequence(level)));
     }
 
     public override void Render()
@@ -66,5 +66,17 @@ file sealed class RosesHUD : Entity
         }
 
         GFX.Gui["troll_effects/rose_vignette"].Draw(Vector2.Zero, Vector2.Zero, Color.White * 0.5f * opacity);
+    }
+
+    private IEnumerator Sequence(Level level)
+    {
+        string previous = level.Session.ColorGrade;
+        level.NextColorGrade("trolls_effect_grab_bag/roses", 2f);
+
+        yield return Routines.Interpolate(0.5f, percent => opacity = percent);
+        yield return 13f;
+
+        level.NextColorGrade(previous);
+        yield return Routines.Interpolate(1f, percent => opacity = 1 - percent);
     }
 }
