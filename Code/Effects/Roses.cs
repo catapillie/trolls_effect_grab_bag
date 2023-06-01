@@ -95,11 +95,8 @@ file sealed class RosesHUD : Entity
         yield return 13f;
 
         Module.Session.Roses_Playing = false;
-        if (!string.IsNullOrEmpty(Module.Session.Roses_LastColorGrade))
-        {
-            level.NextColorGrade(Module.Session.Roses_LastColorGrade);
-            Module.Session.Roses_LastColorGrade = null;
-        }
+        level.NextColorGrade(Module.Session.Roses_LastColorGrade ?? string.Empty);
+        Module.Session.Roses_LastColorGrade = null;
 
         yield return Routines.Interpolate(1f, percent => opacity = 1 - percent);
     }
